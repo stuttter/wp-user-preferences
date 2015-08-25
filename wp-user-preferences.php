@@ -13,6 +13,7 @@
 // Exit if accessed directly
 defined( 'ABSPATH' ) || exit;
 
+if ( ! function_exists( 'wp_get_current_user_preference' ) ) :
 /**
  * Get preference for the currently logged in user. If no user is logged in,
  * a site or network preference will be returned if one is set.
@@ -25,7 +26,9 @@ defined( 'ABSPATH' ) || exit;
 function wp_get_current_user_preference( $key = '' ) {
 	return wp_get_user_preference( get_current_user_id(), $key );
 }
+endif;
 
+if ( ! function_exists( 'wp_get_user_preference' ) ) :
 /**
  * Get a user preference
  *
@@ -57,7 +60,9 @@ function wp_get_user_preference( $user_id = 0, $key = '' ) {
 	// Filter & return
 	return apply_filters( 'wp_get_user_preference', $retval, $user_id, $key );
 }
+endif;
 
+if ( ! function_exists( 'wp_map_user_preference_key' ) ) :
 /**
  * Return an array of key/value pairs for user/site/network settings, based on
  * the usermeta key being passed in.
@@ -108,3 +113,4 @@ function wp_map_user_preference_key( $key = '' ) {
 	// Filter & return
 	return apply_filters( 'wp_map_user_preference_key', $retval, $key );
 }
+endif;
