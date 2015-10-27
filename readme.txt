@@ -1,8 +1,8 @@
 === WP User Preferences ===
-Contributors: johnjamesjacoby
+Contributors: johnjamesjacoby, stuttter
 Tags: multisite, users, preferences
 Requires at least: 4.3
-Tested up to: 4.3
+Tested up to: 4.4
 Stable tag: 0.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -35,11 +35,11 @@ Yes. In a multisite installation, the network setting is the last fallback used.
 
 = Where can I get support? =
 
-The WordPress support forums: https://wordpress.org/tags/wp-user-preferences/
+The WordPress support forums: https://wordpress.org/support/plugin/wp-user-preferences/
 
 = Where can I find documentation? =
 
-http://github.com/johnjamesjacoby/wp-user-preferences/
+https://github.com/stuttter/wp-user-preferences/
 
 == Changelog ==
 
