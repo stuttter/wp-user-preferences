@@ -1,8 +1,9 @@
 === WP User Preferences ===
 Contributors: johnjamesjacoby, stuttter
 Tags: multisite, users, preferences
-Requires at least: 4.3
-Tested up to: 4.4
+Requires at least: 6.4
+Tested up to: 7.1
+Requires PHP: 7.4
 Stable tag: 0.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -60,6 +61,14 @@ The WordPress support forums: https://wordpress.org/support/plugin/wp-user-prefe
 https://github.com/stuttter/wp-user-preferences/
 
 == Changelog ==
+
+= Unreleased =
+* Correct site and network fallback when user metadata does not exist.
+* Preserve intentionally stored empty user preferences.
+* Replace the deprecated user metadata call with current WordPress APIs.
+* Require PHP 7.4 and WordPress 6.4 or newer.
+* Declare compatibility with WordPress 7.1.
+* Add automated regression tests and contributor tooling.
 
 = 0.1.0 =
 * Initial release

@@ -6,8 +6,11 @@
  * Description: Prefer user settings over site & network settings
  * Author:      John James Jacoby
  * Version:     0.1.0
+ * Requires at least: 6.4
+ * Requires PHP: 7.4
  * Author URI:  https://profiles.wordpress.org/johnjamesjacoby/
  * License:     GPL v2 or later
+ * Text Domain: wp-user-preferences
  */
 
 // Exit if accessed directly
@@ -44,8 +47,12 @@ function wp_get_user_preference( $user_id = 0, $key = '' ) {
 	// Get user/site/network preference map
 	$keys = wp_map_user_preference_key( $key );
 
-	// Check usermeta first
-	$retval = get_usermeta( $user_id, $keys['user'] );
+	// Check user metadata first. An explicitly stored empty value is still a
+	// preference, so test for existence separately from retrieving its value.
+	$has_user_preference = ( 0 < $user_id ) && metadata_exists( 'user', $user_id, $keys['user'] );
+	$retval              = $has_user_preference
+		? get_user_meta( $user_id, $keys['user'], true )
+		: false;
 
 	// Nothing, so check site option
 	if ( false === $retval ) {
