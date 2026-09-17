@@ -37,6 +37,15 @@ final class UserPreferencesTest extends TestCase {
 		$this->assertArrayNotHasKey( 'get_option', $GLOBALS['wpup_test']['calls'] ?? array() );
 	}
 
+	public function test_explicitly_false_user_preference_does_not_fall_back(): void {
+		$GLOBALS['wpup_test']['returns']['metadata_exists'] = true;
+		$GLOBALS['wpup_test']['returns']['get_user_meta']   = false;
+		$GLOBALS['wpup_test']['returns']['get_option']      = 'site';
+
+		$this->assertFalse( wp_get_user_preference( 17, 'timezone' ) );
+		$this->assertArrayNotHasKey( 'get_option', $GLOBALS['wpup_test']['calls'] ?? array() );
+	}
+
 	public function test_missing_user_preference_falls_back_to_site(): void {
 		$GLOBALS['wpup_test']['returns']['metadata_exists'] = false;
 		$GLOBALS['wpup_test']['returns']['get_option']      = 'site';

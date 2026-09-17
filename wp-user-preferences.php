@@ -55,7 +55,7 @@ function wp_get_user_preference( $user_id = 0, $key = '' ) {
 		: false;
 
 	// Nothing, so check site option
-	if ( false === $retval ) {
+	if ( ! $has_user_preference ) {
 		$retval = get_option( $keys['site'] );
 
 		// Nothing, so check network option if multisite
