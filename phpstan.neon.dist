@@ -1,0 +1,10 @@
+parameters:
+    level: 7
+    phpVersion: 70400
+    paths:
+        - wp-user-preferences.php
+    scanFiles:
+        - vendor/php-stubs/wordpress-stubs/wordpress-stubs.php
+    tmpDir: build/phpstan
+    parallel:
+        maximumNumberOfProcesses: 1
