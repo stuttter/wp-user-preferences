@@ -7,6 +7,9 @@
     "php": ">=7.4"
   },
   "require-dev": {
+    "johnbillion/wp-compat": "^2.0.1",
+    "php-stubs/wordpress-stubs": "7.1.*",
+    "phpstan/phpstan": "^2.2.13",
     "phpunit/phpunit": "^9.6"
   },
   "license": "GPL-2.0-or-later",
@@ -22,6 +25,7 @@
     ]
   },
   "scripts": {
+    "phpstan": "phpstan analyse --no-progress --memory-limit=1G",
     "test": "phpunit"
   },
   "config": {

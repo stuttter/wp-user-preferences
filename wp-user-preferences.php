@@ -83,7 +83,7 @@ if ( ! function_exists( 'wp_map_user_preference_key' ) ) :
  *
  * @param   string  $key
  *
- * @return  array
+ * @return  array{user: string, site: string, network: string}
  */
 function wp_map_user_preference_key( $key = '' ) {
 
