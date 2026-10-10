@@ -37,7 +37,7 @@ Yes. In a multisite installation, the network setting is the last fallback used.
 
 ### Where can I get support?
 
-Use the GitHub issue tracker: https://github.com/stuttter/wp-user-preferences/issues
+Use GitHub Discussions: https://github.com/stuttter/wp-user-preferences/discussions
 
 ### Can I contribute?
 
