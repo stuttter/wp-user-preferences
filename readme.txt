@@ -54,7 +54,7 @@ Yes. In a multisite installation, the network setting is the last fallback used.
 
 = Where can I get support? =
 
-The WordPress support forums: https://wordpress.org/support/plugin/wp-user-preferences/
+Use GitHub Discussions: https://github.com/stuttter/wp-user-preferences/discussions
 
 = Where can I find documentation? =
 
